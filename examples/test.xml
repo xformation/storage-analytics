@@ -1,0 +1,19 @@
+<user-agents>
+    <Symm_Info>
+        <symid>000292600999</symid>
+    </Symm_Info>
+        <Masking_View>
+            <view_name>v_NYCPCS02329N01</view_name>
+            <init_grpname>i_NYCPCS02329N01</init_grpname>
+            <port_grpname>p_FA05EA_FA12EB</port_grpname>
+            <stor_grpname>s_NYCPCS02329N01</stor_grpname>
+        </Masking_View>
+        <Masking_View>
+            <view_name>v_NYCPSM00004EMC</view_name>
+            <init_grpname>i_NYCPSM00004EMC</init_grpname>
+            <port_grpname>p_FA05EA_FA12EB</port_grpname>
+            <stor_grpname>s_NYCPSM00004EMC</stor_grpname>
+        </Masking_View>
+</user-agents>
+
+
