@@ -1,5 +1,6 @@
 import xmldataset
 import pprint
+import pandas as pd
 
 # Setup Pretty Printing
 ppsetup = pprint.PrettyPrinter(indent=4)
@@ -79,3 +80,6 @@ output = xmldataset.parse_using_profile(xml,profile, dispatch = {
                 'coderef' : print_dataset 
         } 
 })
+print(output)
+# df=pd.DataFrame.from_records(output)
+# print(df)

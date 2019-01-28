@@ -2,7 +2,7 @@ import pprint
 import pandas as pd
 import xmldataset
 from sqlalchemy.types import VARCHAR
-from odo import odo
+
 from pandas.io import sql
 from sqlalchemy import create_engine
 ppsetup = pprint.PrettyPrinter(indent=4)
