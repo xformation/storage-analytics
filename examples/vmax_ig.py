@@ -6,7 +6,9 @@ import re
 from sqlalchemy.types import VARCHAR
 from sqlalchemy import create_engine
 
-tree = ET.parse("cluster_standalone_listview.xml")
+filename = "1695_listview.xml"
+
+tree = ET.parse(filename)
 root = tree.getroot()
 root_tag = root.tag
 
@@ -77,8 +79,9 @@ for child in root:
                 #     print(record)
                 #     if not listw:
                 #         record = {}
-            #-----------------------------
-            # print(listgroup)
+            #-------------------------------
+            # processing group names
+            #-------------------------------
             if listgroup:
                 if flag:
                     # record.update(listgroup.pop(0))
@@ -99,11 +102,16 @@ for child in root:
                 else:
                     record['group_name'] = 'n/a'
                     record['sid'] = sid
+                if record['user_node_name'].isspace():
+                    record['user_node_name'] = 'n/a'
+                if record['user_port_name'].isspace():
+                    record['user_port_name'] = 'n/a'
                 # print(record)
                 flist.append(record.copy())
 
                 if not listw:
                     record = {}
+                    a = ''  #resetting the group name when done with last group name
 
 # print(flist)
 # for i in flist:
